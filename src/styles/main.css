@@ -7,6 +7,7 @@
 * {
     box-sizing: border-box;
     font-family: Roboto;
+    font-weight: 300;
 }
 
 h1{
@@ -35,7 +36,7 @@ h2{
 /* == HEADER == */
 
 .header {
-    height: 80px;
+    min-height: 80px;
     display: flex;
     justify-content: space-between;
 }
@@ -65,6 +66,12 @@ h2{
     text-transform: uppercase;
 }
 
+@media (min-width: 768px) {
+    .sidebar {
+        border-left: 1px dashed #66686c;
+    }
+}
+
 @media (max-width: 767px) {
     .logo__text {
         font-size: 20px;
@@ -88,9 +95,31 @@ h2{
     .main-menu {
         margin-top: 20px;
     }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+
+    }
+}
+
+@media (min-width: 401px) {
+    .title {
+        justify-content: flex-start;
+    }
 }
 
 @media (max-width: 400px) {
+    .header {
+        margin-bottom: 20px;
+    }
+
+    .title {
+        justify-content: center;
+    }
+
     .main-menu nav ul {
         flex-direction: column;
     }
@@ -168,28 +197,52 @@ nav {
 /* == CONTENT == */
 
 .content {
+    height: 100%;
+    flex-grow:1;
+}
+
+.content-wrapper {
     display: flex;
     justify-content: space-between;
+    height: 100%;
 }
 
 .main {
-
+    flex-grow: 1;
+    padding-right: 20px;
 }
 
 
 /* == Sidebar == */
 
 .sidebar {
-    border-left: 1px dashed #66686c;
-    max-width: 200px;
+    max-width: 250px;
     padding-left: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+}
+
+.selected-currency {
+    display: flex;
+}
+
+.selected-currency__label {
+    margin-right: 20px;
+}
+
+
+
+
+
+.favorite {
+    flex-grow: 1;
 }
 
 .favorite__content {
@@ -204,17 +257,26 @@ nav {
     flex-wrap: wrap;
 }
 
+
 .favorite__item {
     display: flex;
     background-color: #66686c;
     border-radius: 5px;
     height: 24px;
+    margin: 5px;
+}
+
+.favorite__item:hover {
+    cursor: pointer;
+    background-color: #A3A3A3;
 }
 
 .favorite__text {
     font-size: 14px;
     font-weight: 300;
-    padding: 4px;
+    padding: 5px;
+    color: white;
+    line-height: 14px;
 }
 
 .favorite__delete {
@@ -225,12 +287,47 @@ nav {
 }
 
 .favorite__delete img {
-    height: 15px;
-    width: 15px;
+    height: 10px;
+    width: 10px;
 }
 
-.table {
+.table-currencies {
+    width: 100%;
+    border-collapse: collapse;
+}
 
+.table-currencies tr:first-child {
+    border-bottom: 2px solid #3a3b3f;
+}
+
+.table-currencies tr:nth-child(2n) {
+    background-color: #DDDDDD;
+}
+
+.table-currencies tr th {
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.table-currencies tr td {
+    padding: 10px;
+}
+
+
+
+.add-favorite-icon {
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+}
+
+.column-add-favorite {
+    text-align: center;
+}
+
+.column-rate {
+    text-align: center;
 }
 
 
