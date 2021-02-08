@@ -61,6 +61,7 @@ export const homepage = {
                         <div class="favorite__content">
                             <div class="favorite__items">
                                 <ul>
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -109,7 +110,11 @@ export const homepage = {
     },
     loadFavoriteInSidebar: function () {
         const favoriteBlock = document.querySelector('.favorite__items ul')
-        favoriteBlock.innerHTML = ''
+        if (config.favoriteArr.length >0) {
+            favoriteBlock.innerHTML = ''
+        } else {
+            favoriteBlock.innerHTML = '<div>Добавьте валюты в избранное</div>'
+        }
         config.favoriteArr.map(item => {
             let elem = document.createElement('li')
             elem.classList.add('favorite__item', `currency__${item}`)
