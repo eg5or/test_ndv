@@ -48,9 +48,9 @@ export const homepage = {
                         <table class="table-currencies">
                             <tr class="header-table">
                                 <th>Валюта</th>
-                                <th>Наименование</th>
+                                <th class="column-name">Наименование</th>
                                 <th>Курс</th>
-                                <th>Добавить в избранное</th>
+                                <th>В избранное</th>
                             </tr>
                         </table>
                     </div>

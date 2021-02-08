@@ -36,6 +36,7 @@ h2{
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 10px;
+    height: 100%;
 }
 
 /* == HEADER == */
@@ -44,10 +45,10 @@ header {
     background-color: white;
     position: sticky;
     top: 0;
+    z-index: 2;
 }
 
 .header {
-    z-index: 1;
     min-height: 80px;
     display: flex;
     justify-content: space-between;
@@ -91,6 +92,10 @@ header {
 }
 
 @media (max-width: 767px) {
+    .favorite {
+        margin-bottom: 20px;
+    }
+
     .icon-separator:after {
         font-family: FontAwesome;
         content: "\f103";
@@ -103,7 +108,7 @@ header {
 
     .logo {
         justify-content: center;
-        padding-top: 20px;
+        padding: 20px 0;
     }
 
     .logo__img img {
@@ -117,7 +122,7 @@ header {
     }
 
     .main-menu {
-        margin-top: 20px;
+
     }
 
     .content-wrapper {
@@ -162,8 +167,9 @@ header {
         margin-left: 0;
     }
 
-    .header {
-        margin-bottom: 20px;
+    header {
+        padding-bottom: 20px;
+        height: 170px;
     }
 
     .title h1{
@@ -196,6 +202,21 @@ header {
     }
 
     .separator-right {
+        display: none;
+    }
+    .title {
+        flex-direction: column;
+    }
+    .selected-currency {
+        margin-bottom: 10px;
+    }
+    .column-name {
+        display: none;
+    }
+    .header-table {
+        font-size: 12px;
+    }
+    .converter__title {
         display: none;
     }
 }
