@@ -1,6 +1,8 @@
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     context: path.join(__dirname, 'src'),
@@ -8,7 +10,7 @@ module.exports = {
     entry: './index.js',
 
     output: {
-        filename: 'bundle.js',
+        filename: 'bundle.[chunkhash].js',
         path: path.join(__dirname, 'dist')
     },
 
@@ -37,7 +39,7 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
             },
             {
-                test: /\.(jpg|png|svg)$/,
+                test: /\.(jpg|jpeg|png|svg)$/,
                 loader: 'file-loader',
                 options: {
                     name: '[path][name].[ext]'

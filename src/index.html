@@ -5,9 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <!--<link rel="stylesheet" type="text/css" href="styles/main.css">-->
     <title>Курсы валют</title>
-    <script src="index.js" defer></script>
+    <!--<script src="index.js" defer></script>-->
+    <script src="https://kit.fontawesome.com/8246854388.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <div class="wrapper">
@@ -22,13 +24,13 @@
                     <nav>
                         <ul>
                             <li class="main-menu__item">
-                                <a href="#">
+                                <a id="link-homepage" href="#/">
                                     <div class="main-menu__icon"><img src="assets/icons/home.svg" alt="homepage"></div>
                                     <div class="main-menu__text">Главная</div>
                                 </a>
                             </li>
                             <li class="main-menu__item">
-                                <a href="#">
+                                <a id="link-converter" href="#/converter">
                                     <div class="main-menu__icon"><img src="assets/icons/converter.svg" alt="converter">
                                     </div>
                                     <div class="main-menu__text">Конвертация валют</div>
@@ -42,80 +44,8 @@
     </header>
     <div class="content">
         <div class="container">
-            <div class="content-wrapper">
-                <div class="main">
-                    <div class="title">
-                        <h1>Текущие курсы</h1>
-                        <div class="selected-currency">
-                            <div class="selected-currency__label">Выберете валюту: </div>
-                            <div class="selected-currency_input">
-                                <select>
-                                    <option>USD</option>
-                                    <option>RUB</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="table">
-                        <table class="table-currencies">
-                            <tr>
-                                <th>Валюта</th>
-                                <th>Наименование</th>
-                                <th>Курс</th>
-                                <th>Добавить в избранное</th>
-                            </tr>
-                            <tr>
-                                <td class="column-symbol">USD</td>
-                                <td class="column-name">Доллар США</td>
-                                <td class="column-rate">76,55</td>
-                                <td class="column-add-favorite"><img class="add-favorite-icon" src="assets/icons/star.svg" alt="add to favorite"></td>
-                            </tr>
-                            <tr>
-                                <td class="column-symbol">EURO</td>
-                                <td class="column-name">Евро</td>
-                                <td class="column-rate">92,15</td>
-                                <td class="column-add-favorite"><img class="add-favorite-icon" src="assets/icons/star.svg" alt="add to favorite"></td>
-                            </tr>
-                            <tr>
-                                <td class="column-symbol">BTC</td>
-                                <td class="column-name">Биткоин</td>
-                                <td class="column-rate">21566300,25</td>
-                                <td class="column-add-favorite"><img class="add-favorite-icon" src="assets/icons/star.svg" alt="add to favorite"></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="sidebar">
-                    <div class="favorite">
-                        <div class="favorite__title"><h2>Избранное</h2></div>
-                        <div class="favorite__content">
-                            <div class="favorite__items">
-                                <ul>
-                                    <li class="favorite__item">
-                                        <div class="favorite__text">USD</div>
-                                        <div class="favorite__delete"><img src="assets/icons/cancel.svg" alt="delete">
-                                        </div>
-                                    </li>
-                                    <li class="favorite__item">
-                                        <div class="favorite__text">RUB</div>
-                                        <div class="favorite__delete"><img src="assets/icons/cancel.svg" alt="delete">
-                                        </div>
-                                    </li>
-                                    <li class="favorite__item">
-                                        <div class="favorite__text">BTC</div>
-                                        <div class="favorite__delete"><img src="assets/icons/cancel.svg" alt="delete">
-                                        </div>
-                                    </li>
-                                    <li class="favorite__item">
-                                        <div class="favorite__text">ETH</div>
-                                        <div class="favorite__delete"><img src="assets/icons/cancel.svg" alt="delete">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="page-content" class="content-wrapper">
+
             </div>
         </div>
     </div>
